@@ -2,24 +2,31 @@
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "framework": null,
   "outputDirectory": ".",
-  "buildCommand": null,
-  "installCommand": null,
+  "buildCommand": "",
+  "installCommand": "",
   "trailingSlash": false,
-
   "rewrites": [
     {
       "source": "/api/:path*",
       "destination": "https://llama-site-production.up.railway.app/api/:path*"
     }
   ],
-
   "headers": [
     {
       "source": "/(.*)",
       "headers": [
-        { "key": "X-Content-Type-Options", "value": "nosniff" },
-        { "key": "X-Frame-Options", "value": "DENY" },
-        { "key": "Referrer-Policy", "value": "strict-origin-when-cross-origin" },
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        },
+        {
+          "key": "X-Frame-Options",
+          "value": "DENY"
+        },
+        {
+          "key": "Referrer-Policy",
+          "value": "strict-origin-when-cross-origin"
+        },
         {
           "key": "Permissions-Policy",
           "value": "geolocation=(), microphone=(), camera=(), payment=(self \"https://checkout.stripe.com\")"
@@ -33,7 +40,10 @@
     {
       "source": "/assets/(.*)",
       "headers": [
-        { "key": "Cache-Control", "value": "public, max-age=300, must-revalidate" }
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=300, must-revalidate"
+        }
       ]
     }
   ]
