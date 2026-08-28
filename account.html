@@ -1,0 +1,326 @@
+<!doctype html>
+<html lang="en" data-page="account">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Manage your subscription | Llama</title>
+<meta name="description" content="Update your card, download VAT or GST invoices, switch plan or cancel your Llama subscription.">
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<meta property="og:title" content="Manage your subscription | Llama">
+<meta property="og:description" content="Update your card, download VAT or GST invoices, switch plan or cancel your Llama subscription.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="assets/img/logo.svg">
+<meta name="theme-color" content="#0e7c7b">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&amp;family=Inter:wght@400;500;600;700&amp;family=Noto+Sans+JP:wght@400;500;700&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+
+<a class="skip-link" href="#main" data-i18n="a11y.skip">Skip to main content</a>
+
+<header class="site-header">
+  <div class="shell site-header__inner">
+    <a class="brand" href="index.html">
+      <svg class="brand__mark" viewBox="0 0 64 64" aria-hidden="true"><defs><linearGradient id="bm" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#12958f"/><stop offset=".55" stop-color="#0e7c7b"/><stop offset="1" stop-color="#095857"/></linearGradient></defs><rect width="64" height="64" rx="16" fill="url(#bm)"/><g fill="#fff"><path d="M35.2 20.6c-1.3-5.8-.5-9.6 2-9.8 2.5-.2 3.7 3.4 3.3 9.4z"/><path d="M45.6 21.4c.2-5.9 1.6-8.9 3.7-8.4 2.1.5 2.3 4.4.6 9.3z"/><path d="M34.6 19.8h6.6a9.4 9.4 0 0 1 9.4 9.4v20.9a4.6 4.6 0 0 1-4.6 4.6h-3.9a4.6 4.6 0 0 1-4.6-4.6V37.9h-8.1a8.4 8.4 0 0 1-8.4-8.4v-1.2a8.5 8.5 0 0 1 8.5-8.5z"/><rect x="11.4" y="22.6" width="22.6" height="14.6" rx="7.3"/></g><circle cx="31.6" cy="27.4" r="2.4" fill="#0e7c7b"/></svg>
+      <span>Llama<span class="brand__llc">LLC</span></span>
+    </a>
+
+    <nav class="nav" aria-label="Primary">
+      <a href="index.html" data-i18n="nav.home">Home</a>
+      <a href="features.html" data-i18n="nav.features">Features</a>
+      <a href="pricing.html" data-i18n="nav.pricing">Pricing</a>
+      <a href="about.html" data-i18n="nav.about">About</a>
+      <a href="contact.html" data-i18n="nav.contact">Contact</a>
+    </nav>
+
+    <div class="header-actions">
+      <div class="locale-switch">
+        <button type="button" class="locale-switch__btn" aria-expanded="false" aria-haspopup="dialog">
+          <span class="flag" aria-hidden="true">&#127760;</span>
+          <span class="label">US &middot; USD</span>
+          <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="locale-panel" role="dialog" aria-label="Region and language">
+          <div class="field">
+            <label for="region-select" data-i18n="switch.region">Region</label>
+            <select class="select" id="region-select" data-role="region-select"></select>
+          </div>
+          <div class="field">
+            <label for="lang-select" data-i18n="switch.language">Language</label>
+            <select class="select" id="lang-select" data-role="lang-select"></select>
+          </div>
+          <p class="locale-panel__note" data-i18n="switch.note"></p>
+        </div>
+      </div>
+
+      <button type="button" class="icon-btn theme-toggle" data-action="toggle-theme" data-i18n-attr="aria-label:a11y.theme" aria-label="Switch colour theme">
+        <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+      </button>
+
+      <a class="btn btn--outline btn--sm account-link" href="account.html" data-when="signed-in" hidden>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="3.6"/><path d="M4.5 20a7.5 7.5 0 0 1 15 0"/></svg>
+        <span data-i18n="nav.account">Account</span>
+        <span class="badge badge--free" data-role="account-chip" hidden></span>
+      </a>
+
+      <a class="btn btn--primary btn--sm" href="signup.html" data-when="signed-out" data-i18n="cta.startFree">Start free</a>
+
+      <button type="button" class="icon-btn nav-toggle" data-action="toggle-nav" aria-expanded="false" aria-controls="mobile-nav" data-i18n-attr="aria-label:a11y.menu" aria-label="Menu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><line x1="3" y1="7" x2="21" y2="7"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="17" x2="21" y2="17"/></svg>
+      </button>
+    </div>
+  </div>
+
+  <div class="shell">
+    <nav class="mobile-nav" id="mobile-nav" aria-label="Mobile">
+      <a href="index.html" data-i18n="nav.home">Home</a>
+      <a href="features.html" data-i18n="nav.features">Features</a>
+      <a href="pricing.html" data-i18n="nav.pricing">Pricing</a>
+      <a href="about.html" data-i18n="nav.about">About</a>
+      <a href="contact.html" data-i18n="nav.contact">Contact</a>
+      <div class="cluster">
+        <a class="btn btn--primary" href="signup.html" data-i18n="cta.startFree">Start free</a>
+        <a class="btn btn--outline" href="pricing.html" data-i18n="cta.seePlans">See plans</a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+  <section class="page-hero">
+    <div class="shell">
+      <div class="crumbs"><a href="index.html" data-i18n="nav.home">Home</a> <span>/</span> <span data-i18n="account.title">Your account</span></div>
+      <h1 data-role="account-heading" data-i18n="account.title">Your account</h1>
+      <p class="lede" data-role="account-lede" data-i18n="account.lede"></p>
+    </div>
+  </section>
+
+  <section class="section" id="account-page">
+
+    <!-- ============ Signed out ============ -->
+    <div class="shell shell--narrow" data-account-state="out" hidden>
+      <div class="notice mb-5" data-when="payments-off">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+        <div>
+          <strong data-i18n="pricing.noPaymentTitle">Subscriptions are not live yet</strong>
+          <span data-i18n="account.notLiveBody"></span>
+        </div>
+      </div>
+
+      <div class="notice notice--warn mb-5" data-role="signin-expired" hidden>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+        <div><span data-i18n="account.linkExpired"></span></div>
+      </div>
+
+      <form id="signin-form" class="card stack" novalidate>
+        <h3 data-i18n="account.signInTitle">Sign in</h3>
+        <p class="muted" style="font-size:.93rem" data-i18n="account.signInLede"></p>
+        <div class="field">
+          <label for="signin-email" data-i18n="account.emailLabel">The email address on your subscription</label>
+          <input class="input" type="email" id="signin-email" name="email" required autocomplete="email" data-i18n-attr="placeholder:modal.emailPh" placeholder="you@example.com">
+          <span class="hint" data-i18n="account.signInHint"></span>
+        </div>
+        <div class="cluster">
+          <button type="submit" class="btn btn--primary" data-i18n="account.sendLink">Email me a sign-in link</button>
+        </div>
+      </form>
+
+      <div class="form-note mt-4" data-role="dev-link" hidden>
+        <strong data-i18n="account.devLinkTitle"></strong>
+        <p class="mt-2" style="font-size:.85rem" data-i18n="account.devLinkBody"></p>
+        <p class="mt-2"><a href="#" data-role="dev-link-url" style="word-break:break-all;font-size:.82rem"></a></p>
+      </div>
+
+      <p class="muted mt-6 center" style="font-size:.92rem" data-i18n-html="account.noSubYet"></p>
+    </div>
+
+    <!-- ============ Signed in ============ -->
+    <div class="shell" data-account-state="in" hidden>
+      <div class="signup-grid">
+        <div>
+          <!-- Plan summary -->
+          <article class="card mb-5">
+            <div class="feature-card__head">
+              <div>
+                <span class="eyebrow" data-i18n="account.yourPlan">Your plan</span>
+                <h2 style="font-size:1.9rem;margin-top:6px"><span data-role="plan-name">—</span></h2>
+              </div>
+              <span class="badge" data-role="plan-status">—</span>
+            </div>
+            <div id="plan-meta" class="mt-4"></div>
+
+            <div class="notice notice--warn mt-4" data-role="billing-mismatch" hidden>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+              <div>
+                <strong data-i18n="account.mismatchTitle"></strong>
+                <span data-role="mismatch-message"></span>
+                <a href="pricing.html" data-i18n="account.mismatchAction"></a>
+              </div>
+            </div>
+            <div class="cluster mt-5">
+              <button type="button" class="btn btn--primary" data-action="open-portal" data-i18n="account.manageBilling">Manage billing</button>
+              <a class="btn btn--outline" href="pricing.html" data-role="change-plan" data-i18n="account.changePlan">Change plan</a>
+              <button type="button" class="btn btn--ghost" data-action="sign-out" data-i18n="account.signOut">Sign out</button>
+            </div>
+          </article>
+
+          <!-- Gated feature demo -->
+          <article class="card">
+            <div class="feature-card__head">
+              <h3 data-i18n="account.trips">Your trips</h3>
+              <span class="badge badge--soft" data-role="trips-usage">—</span>
+            </div>
+            <p class="muted mt-2" style="font-size:.92rem" data-i18n="account.tripsLede"></p>
+
+            <div class="notice notice--warn mt-4" data-role="limit-notice" hidden>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+              <div>
+                <strong data-role="limit-message"></strong>
+                <a href="pricing.html" data-role="limit-upgrade" data-i18n="account.upgradePrompt"></a>
+              </div>
+            </div>
+
+            <ul class="checklist mt-4" data-role="trip-list"></ul>
+            <p class="subtle mt-3" style="font-size:.88rem" data-role="trips-empty" data-i18n="account.noTrips" hidden></p>
+
+            <form id="trip-form" class="stack mt-5" novalidate>
+              <div class="grid grid-3">
+                <div class="field">
+                  <label for="trip-destination" data-i18n="account.destination">Destination</label>
+                  <input class="input" type="text" id="trip-destination" required maxlength="120" placeholder="Kyoto">
+                </div>
+                <div class="field">
+                  <label for="trip-travellers" data-i18n="account.travellers">Travellers</label>
+                  <input class="input" type="number" id="trip-travellers" min="1" max="20" value="1">
+                </div>
+                <div class="field">
+                  <label for="trip-days" data-i18n="account.days">Days</label>
+                  <input class="input" type="number" id="trip-days" min="1" max="90" value="5">
+                </div>
+              </div>
+              <div class="cluster">
+                <button type="submit" class="btn btn--primary btn--sm" data-i18n="account.createTrip">Plan a trip</button>
+                <span class="subtle" style="font-size:.84rem" data-i18n="account.enforcedNote"></span>
+              </div>
+            </form>
+          </article>
+        </div>
+
+        <!-- Entitlements -->
+        <aside class="card order-summary">
+          <h3 data-i18n="account.entitlements">What your plan includes</h3>
+          <div id="entitlement-list" class="mt-4"></div>
+          <p class="subtle mt-4" style="font-size:.8rem" data-i18n="account.entitlementsNote"></p>
+        </aside>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="shell">
+    <div class="footer-grid">
+      <div class="footer-col footer-about">
+        <a class="brand" href="index.html">
+          <svg class="brand__mark" viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="16" fill="#0e7c7b"/><g fill="#fff"><path d="M35.2 20.6c-1.3-5.8-.5-9.6 2-9.8 2.5-.2 3.7 3.4 3.3 9.4z"/><path d="M45.6 21.4c.2-5.9 1.6-8.9 3.7-8.4 2.1.5 2.3 4.4.6 9.3z"/><path d="M34.6 19.8h6.6a9.4 9.4 0 0 1 9.4 9.4v20.9a4.6 4.6 0 0 1-4.6 4.6h-3.9a4.6 4.6 0 0 1-4.6-4.6V37.9h-8.1a8.4 8.4 0 0 1-8.4-8.4v-1.2a8.5 8.5 0 0 1 8.5-8.5z"/><rect x="11.4" y="22.6" width="22.6" height="14.6" rx="7.3"/></g><circle cx="31.6" cy="27.4" r="2.4" fill="#0e7c7b"/></svg>
+          <span>Llama<span class="brand__llc">LLC</span></span>
+        </a>
+        <p data-i18n="footer.about">Llama is a travel planning assistant built by Llama LLC.</p>
+      </div>
+
+      <div class="footer-col">
+        <h4 data-i18n="footer.product">Product</h4>
+        <ul>
+          <li><a href="features.html" data-i18n="nav.features">Features</a></li>
+          <li><a href="pricing.html" data-i18n="nav.pricing">Pricing</a></li>
+          <li><a href="signup.html" data-i18n="cta.startFree">Start free</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4 data-i18n="footer.company">Company</h4>
+        <ul>
+          <li><a href="about.html" data-i18n="nav.about">About</a></li>
+          <li><a href="about.html#careers" data-i18n="footer.careers">Careers</a></li>
+          <li><a href="about.html#press" data-i18n="footer.press">Press</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4 data-i18n="footer.support">Support</h4>
+        <ul>
+          <li><a href="contact.html" data-i18n="footer.contact">Contact us</a></li>
+          <li><a href="account.html" data-i18n="account.title">Manage subscription</a></li>
+          <li><a href="contact.html#help" data-i18n="footer.help">Help centre</a></li>
+          <li><a href="contact.html#status" data-i18n="footer.status">System status</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4 data-i18n="footer.legal">Legal</h4>
+        <ul>
+          <li><a href="legal/privacy.html" data-i18n="footer.privacy">Privacy notice</a></li>
+          <li><a href="legal/terms.html" data-i18n="footer.terms">Terms of service</a></li>
+          <li><a href="legal/cookies.html" data-i18n="footer.cookies">Cookie policy</a></li>
+          <li><a href="legal/refunds.html" data-i18n="footer.refunds">Refunds &amp; cancellation</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p data-i18n="footer.rights">&copy; 2026 Llama LLC. All rights reserved.</p>
+      <p data-i18n="brand.tagline">Travel planning, handled.</p>
+    </div>
+    <p class="footer-legal-note" data-i18n="footer.entityNote"></p>
+    <p class="footer-legal-note"><strong data-i18n="footer.demoNote"></strong></p>
+  </div>
+</footer>
+
+<!-- Plan interest modal - stands in for checkout until a payment processor is connected -->
+<dialog class="modal" id="plan-modal" aria-labelledby="plan-modal-title">
+  <button type="button" class="modal__close" data-action="close-modal" data-i18n-attr="aria-label:a11y.close" aria-label="Close">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+  </button>
+  <form class="modal__body" novalidate>
+    <h3 id="plan-modal-title" data-i18n="modal.title">Payments are not live yet</h3>
+    <p class="muted" data-role="modal-body" style="font-size:.93rem"></p>
+    <div class="form-note"><strong data-i18n="modal.planLabel">Selected plan</strong>: <span data-role="modal-plan"></span></div>
+    <div class="field">
+      <label for="modal-email" data-i18n="modal.emailLabel">Email address</label>
+      <input class="input" type="email" id="modal-email" required autocomplete="email" data-i18n-attr="placeholder:modal.emailPh" placeholder="you@example.com">
+    </div>
+    <label class="checkbox-row">
+      <input type="checkbox" required>
+      <span data-i18n="modal.consent">Email me once when subscriptions open.</span>
+    </label>
+    <div class="cluster">
+      <button type="submit" class="btn btn--primary" data-i18n="modal.submit">Tell me at launch</button>
+      <button type="button" class="btn btn--ghost" data-action="close-modal" data-i18n="modal.cancel">Not now</button>
+    </div>
+  </form>
+</dialog>
+
+<div class="cookie-bar" id="cookie-bar" role="region" aria-label="Cookie consent">
+  <h4 data-i18n="cookie.title">Cookies</h4>
+  <p data-i18n="cookie.body">We use strictly necessary cookies to run the site.</p>
+  <div class="cluster">
+    <button type="button" class="btn btn--primary btn--sm" data-consent="all" data-i18n="cookie.accept">Accept all</button>
+    <button type="button" class="btn btn--outline btn--sm" data-consent="essential" data-i18n="cookie.essential">Essential only</button>
+    <a class="btn btn--ghost btn--sm" href="legal/cookies.html" data-i18n="cookie.more">Cookie policy</a>
+  </div>
+</div>
+
+<div class="toast" id="toast" role="status" aria-live="polite">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+  <span data-role="toast-text"></span>
+</div>
+
+<script src="assets/js/config.js"></script>
+<script src="assets/js/i18n.js"></script>
+<script src="assets/js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+{
+  "premium": {
+    "USD": {
+      "monthly": "price_1U7mAV90mzpH2DfhVdiBWy2o",
+      "annual": "price_1U7mAV90mzpH2Dfh6q2Sf3GS"
+    },
+    "GBP": {
+      "monthly": "price_1U9BnH90mzpH2DfhVEesxjvm",
+      "annual": "price_1U9BnH90mzpH2DfhknQ0wSo4"
+    },
+    "EUR": {
+      "monthly": "price_1U9BnI90mzpH2Dfh0UOh13IS",
+      "annual": "price_1U9BnI90mzpH2DfhwzRyUHy3"
+    },
+    "INR": {
+      "monthly": "price_1U9BnJ90mzpH2DfhAU36GV2U",
+      "annual": "price_1U9BnJ90mzpH2DfhCAoN8qPi"
+    },
+    "JPY": {
+      "monthly": "price_1U9BnK90mzpH2DfhiVEQ8sVv",
+      "annual": "price_1U9BnK90mzpH2DfhtVtzSYg9"
+    }
+  },
+  "pro": {
+    "USD": {
+      "monthly": "price_1U7mAY90mzpH2DfharkjfYK6",
+      "annual": "price_1U7mAY90mzpH2DfhQXtZGS7Z"
+    },
+    "GBP": {
+      "monthly": "price_1U9BnL90mzpH2DfhhmKW2tfB",
+      "annual": "price_1U9BnL90mzpH2Dfh9xMuSa8u"
+    },
+    "EUR": {
+      "monthly": "price_1U9BnM90mzpH2Dfhy8AoZg3k",
+      "annual": "price_1U9BnN90mzpH2DfhFvzDCck2"
+    },
+    "INR": {
+      "monthly": "price_1U9BnN90mzpH2DfhDN2XuwEE",
+      "annual": "price_1U9BnN90mzpH2DfheLTT0uvm"
+    },
+    "JPY": {
+      "monthly": "price_1U9BnO90mzpH2DfhehZDNFkz",
+      "annual": "price_1U9BnO90mzpH2DfhxVHb23C5"
+    }
+  }
+}

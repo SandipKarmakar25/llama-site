@@ -1,0 +1,366 @@
+<!doctype html>
+<html lang="en" data-page="features">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Features | Llama</title>
+<meta name="description" content="Every Llama feature and the plan it belongs to: itinerary building, fare watching, disruption handling, entry requirements, group trips and business travel mode.">
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<meta property="og:title" content="Features | Llama">
+<meta property="og:description" content="Every Llama feature and the plan it belongs to: itinerary building, fare watching, disruption handling, entry requirements, group trips and business travel mode.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="assets/img/logo.svg">
+<meta name="theme-color" content="#0e7c7b">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&amp;family=Inter:wght@400;500;600;700&amp;family=Noto+Sans+JP:wght@400;500;700&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+
+<a class="skip-link" href="#main" data-i18n="a11y.skip">Skip to main content</a>
+
+<header class="site-header">
+  <div class="shell site-header__inner">
+    <a class="brand" href="index.html">
+      <svg class="brand__mark" viewBox="0 0 64 64" aria-hidden="true"><defs><linearGradient id="bm" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#12958f"/><stop offset=".55" stop-color="#0e7c7b"/><stop offset="1" stop-color="#095857"/></linearGradient></defs><rect width="64" height="64" rx="16" fill="url(#bm)"/><g fill="#fff"><path d="M35.2 20.6c-1.3-5.8-.5-9.6 2-9.8 2.5-.2 3.7 3.4 3.3 9.4z"/><path d="M45.6 21.4c.2-5.9 1.6-8.9 3.7-8.4 2.1.5 2.3 4.4.6 9.3z"/><path d="M34.6 19.8h6.6a9.4 9.4 0 0 1 9.4 9.4v20.9a4.6 4.6 0 0 1-4.6 4.6h-3.9a4.6 4.6 0 0 1-4.6-4.6V37.9h-8.1a8.4 8.4 0 0 1-8.4-8.4v-1.2a8.5 8.5 0 0 1 8.5-8.5z"/><rect x="11.4" y="22.6" width="22.6" height="14.6" rx="7.3"/></g><circle cx="31.6" cy="27.4" r="2.4" fill="#0e7c7b"/></svg>
+      <span>Llama<span class="brand__llc">LLC</span></span>
+    </a>
+
+    <nav class="nav" aria-label="Primary">
+      <a href="index.html" data-i18n="nav.home">Home</a>
+      <a href="features.html" data-i18n="nav.features">Features</a>
+      <a href="pricing.html" data-i18n="nav.pricing">Pricing</a>
+      <a href="about.html" data-i18n="nav.about">About</a>
+      <a href="contact.html" data-i18n="nav.contact">Contact</a>
+    </nav>
+
+    <div class="header-actions">
+      <div class="locale-switch">
+        <button type="button" class="locale-switch__btn" aria-expanded="false" aria-haspopup="dialog">
+          <span class="flag" aria-hidden="true">&#127760;</span>
+          <span class="label">US &middot; USD</span>
+          <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="locale-panel" role="dialog" aria-label="Region and language">
+          <div class="field">
+            <label for="region-select" data-i18n="switch.region">Region</label>
+            <select class="select" id="region-select" data-role="region-select"></select>
+          </div>
+          <div class="field">
+            <label for="lang-select" data-i18n="switch.language">Language</label>
+            <select class="select" id="lang-select" data-role="lang-select"></select>
+          </div>
+          <p class="locale-panel__note" data-i18n="switch.note"></p>
+        </div>
+      </div>
+
+      <button type="button" class="icon-btn theme-toggle" data-action="toggle-theme" data-i18n-attr="aria-label:a11y.theme" aria-label="Switch colour theme">
+        <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+      </button>
+
+      <a class="btn btn--outline btn--sm account-link" href="account.html" data-when="signed-in" hidden>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="3.6"/><path d="M4.5 20a7.5 7.5 0 0 1 15 0"/></svg>
+        <span data-i18n="nav.account">Account</span>
+        <span class="badge badge--free" data-role="account-chip" hidden></span>
+      </a>
+
+      <a class="btn btn--primary btn--sm" href="signup.html" data-when="signed-out" data-i18n="cta.startFree">Start free</a>
+
+      <button type="button" class="icon-btn nav-toggle" data-action="toggle-nav" aria-expanded="false" aria-controls="mobile-nav" data-i18n-attr="aria-label:a11y.menu" aria-label="Menu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><line x1="3" y1="7" x2="21" y2="7"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="17" x2="21" y2="17"/></svg>
+      </button>
+    </div>
+  </div>
+
+  <div class="shell">
+    <nav class="mobile-nav" id="mobile-nav" aria-label="Mobile">
+      <a href="index.html" data-i18n="nav.home">Home</a>
+      <a href="features.html" data-i18n="nav.features">Features</a>
+      <a href="pricing.html" data-i18n="nav.pricing">Pricing</a>
+      <a href="about.html" data-i18n="nav.about">About</a>
+      <a href="contact.html" data-i18n="nav.contact">Contact</a>
+      <div class="cluster">
+        <a class="btn btn--primary" href="signup.html" data-i18n="cta.startFree">Start free</a>
+        <a class="btn btn--outline" href="pricing.html" data-i18n="cta.seePlans">See plans</a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+  <section class="page-hero">
+    <div class="shell">
+      <span class="eyebrow" data-i18n="feat.eyebrow">What it does</span>
+      <h1>Every feature, and exactly which plan it sits in</h1>
+      <p class="lede">Llama is one assistant with three levels of access. Nothing here is a teaser: the Free plan is a real product, and the paid tiers exist because live price watching, human concierge and round-the-clock cover cost money to run.</p>
+      <div class="cluster mt-4">
+        <a class="btn btn--primary" href="signup.html" data-i18n="cta.startFree">Start free</a>
+        <a class="btn btn--outline" href="pricing.html" data-i18n="cta.comparePlans">Compare all features</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="shell">
+      <div class="section-head">
+        <span class="eyebrow">Planning</span>
+        <h2>From a vague idea to a plan you can actually follow</h2>
+      </div>
+      <div class="grid grid-3">
+
+        <article class="card feature-card">
+          <div class="feature-card__head"><span class="icon-tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 3 3 6v15l6-3 6 3 6-3V3l-6 3z"/><path d="M9 3v15M15 6v15"/></svg></span><span class="badge badge--free">Free</span></div>
+          <h3>Conversational itinerary building</h3>
+          <p>Describe the trip the way you would to a friend. Llama asks the two or three questions that actually change the answer, then produces a day-by-day plan.</p>
+          <ul class="checklist"><li>Routes ordered so you are not crossing the city twice</li><li>Realistic transfer and travel times</li><li>Opening hours and closure days checked</li><li>Free plan covers itineraries up to five days</li></ul>
+        </article>
+
+        <article class="card feature-card">
+          <div class="feature-card__head"><span class="icon-tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="3" width="14" height="13" rx="3"/><line x1="5" y1="10" x2="19" y2="10"/><circle cx="9" cy="13.2" r="1"/><circle cx="15" cy="13.2" r="1"/><path d="m7 19-2 2.5M17 19l2 2.5"/></svg></span><span class="badge badge--premium">Premium</span></div>
+          <h3>Local rail and transit routing</h3>
+          <p>Point-to-point routing on the networks people actually use in each of our markets, not a generic map link.</p>
+          <ul class="checklist"><li>Deutsche Bahn, SNCF and TGV connections</li><li>JR and Shinkansen, including pass break-even maths</li><li>National Rail, IRCTC and Amtrak</li><li>Walking and metro legs between each stop</li></ul>
+        </article>
+
+        <article class="card feature-card">
+          <div class="feature-card__head"><span class="icon-tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9.2"/><line x1="2.8" y1="12" x2="21.2" y2="12"/><path d="M12 2.8a14.5 14.5 0 0 1 0 18.4 14.5 14.5 0 0 1 0-18.4z"/></svg></span><span class="badge badge--premium">Premium</span></div>
+          <h3>Multi-city and long-haul routing</h3>
+          <p>Open-jaw flights, overland legs and sensible ordering for trips that visit more than one place.</p>
+          <ul class="checklist"><li>Up to three cities on Premium, unlimited on Pro</li><li>Open-jaw and multi-city fare construction</li><li>Overland versus flying compared on time and cost</li><li>Round-the-world routings on Pro</li></ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--alt">
+    <div class="shell">
+      <div class="section-head">
+        <span class="eyebrow">Prices and booking</span>
+        <h2>The part that pays for itself</h2>
+      </div>
+      <div class="grid grid-3">
+
+        <article class="card feature-card">
+          <div class="feature-card__head"><span class="icon-tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="22 12 18 12 15 20 9 4 6 12 2 12"/></svg></span><span class="badge badge--premium">Premium</span></div>
+          <h3>Fare and hotel price watching</h3>
+          <p>Register a route once and Llama keeps checking. You get told when the price moves, not when a marketing calendar says so.</p>
+          <ul class="checklist"><li>20 watched routes on Premium, unlimited on Pro</li><li>Price-drop alerts by email and push</li><li>Historical price bands so you know if it is actually cheap</li><li>Hotel rate re-checks against your existing booking</li></ul>
+        </article>
+
+        <article class="card feature-card">
+          <div class="feature-card__head"><span class="icon-tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10.3 3.2 1.8 17.5A2 2 0 0 0 3.5 20.5h17a2 2 0 0 0 1.7-3L13.7 3.2a2 2 0 0 0-3.4 0z"/><line x1="12" y1="9" x2="12" y2="13.5"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg></span><span class="badge badge--premium">Premium</span></div>
+          <h3>Disruption handling</h3>
+          <p>Delays and cancellations are where a planning tool earns its keep. Llama watches your booked flights and reacts before you have to.</p>
+          <ul class="checklist"><li>Rebooking options ranked by arrival time</li><li>Downstream itinerary rebuilt automatically</li><li>Connection risk flagged before you book</li><li>EU261 and UK261 compensation eligibility noted</li></ul>
+        </article>
+
+        <article class="card feature-card">
+          <div class="feature-card__head"><span class="icon-tile icon-tile--accent"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 7.5A2.5 2.5 0 0 1 5.5 5H18a2 2 0 0 1 2 2v1"/><rect x="3" y="7.5" width="18" height="12.5" rx="2.5"/><circle cx="16.5" cy="13.7" r="1.2"/></svg></span><span class="badge badge--pro">Pro</span></div>
+          <h3>Points and loyalty optimiser</h3>
+          <p>Whether to pay cash or burn points is a maths problem. Llama does the maths across the programmes you actually hold.</p>
+          <ul class="checklist"><li>Cash versus points break-even per booking</li><li>Airline and hotel programme balances tracked</li><li>Status-qualifying spend and segments</li><li>Transfer-partner routes surfaced</li></ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="shell">
+      <div class="section-head">
+        <span class="eyebrow">On the trip</span>
+        <h2>Useful once you have actually left the house</h2>
+      </div>
+      <div class="grid grid-3">
+
+        <article class="card feature-card">
+          <div class="feature-card__head"><span class="icon-tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="2.5" width="16" height="19" rx="2.5"/><circle cx="12" cy="10" r="2.6"/><path d="M8 17.5c1-2 6.9-2 8 0"/></svg></span><span class="badge badge--premium">Premium</span></div>
+          <h3>Entry rules and documents</h3>
+          <p>Requirements depend on your nationality, your route and sometimes your transit airport. Llama checks per traveller rather than per country.</p>
+          <ul class="checklist"><li>Visa and e-visa requirements by passport held</li><li>Passport validity and blank-page rules</li><li>Transit visa traps flagged in advance</li><li>Vaccination and health entry rules</li></ul>
+        </article>
+
+        <article class="card feature-card">
+          <div class="feature-card__head"><span class="icon-tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 18a4 4 0 0 1 .6-8 6 6 0 0 1 11.4 1.2A3.6 3.6 0 0 1 19.5 18z"/><line x1="3" y1="3" x2="21" y2="21"/></svg></span><span class="badge badge--premium">Premium</span></div>
+          <h3>Offline access and exports</h3>
+          <p>Airport wifi is unreliable and roaming is expensive. Take the whole plan with you.</p>
+          <ul class="checklist"><li>Offline itinerary and downloaded maps</li><li>PDF export formatted for printing</li><li>Calendar export with travel-time blocks</li><li>Confirmation numbers in one place</li></ul>
+        </article>
+
+        <article class="card feature-card">
+          <div class="feature-card__head"><span class="icon-tile icon-tile--accent"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 19h18"/><path d="M4.5 19a7.5 7.5 0 0 1 15 0"/><line x1="12" y1="6.5" x2="12" y2="4"/><circle cx="12" cy="7.6" r="1.1"/></svg></span><span class="badge badge--pro">Pro</span></div>
+          <h3>Human concierge and 24/7 cover</h3>
+          <p>For the things software cannot do: calling a hotel that does not answer email, or sorting a problem at 3am local time.</p>
+          <ul class="checklist"><li>5 concierge requests per month on Pro</li><li>Restaurant and activity reservations</li><li>24/7 chat and callback on travel days</li><li>Escalation to a named agent</li></ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--alt">
+    <div class="shell">
+      <div class="section-head">
+        <span class="eyebrow">People, teams and money</span>
+        <h2>Trips with other people in them</h2>
+      </div>
+      <div class="grid grid-3">
+
+        <article class="card feature-card">
+          <div class="feature-card__head"><span class="icon-tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 20v-1.8a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4V20"/><circle cx="9" cy="7" r="3.4"/><path d="M22 20v-1.8a4 4 0 0 0-3-3.9"/><path d="M16 3.3a4 4 0 0 1 0 7.4"/></svg></span><span class="badge badge--premium">Premium</span></div>
+          <h3>Shared and group trips</h3>
+          <p>Everyone sees the same plan, and preferences are held per person rather than averaged into mush.</p>
+          <ul class="checklist"><li>Up to 4 travellers on Premium, 12 on Pro</li><li>Per-person preferences and constraints</li><li>Shared budget with split tracking</li><li>Comment and vote on options</li></ul>
+        </article>
+
+        <article class="card feature-card">
+          <div class="feature-card__head"><span class="icon-tile icon-tile--accent"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="7" width="20" height="14" rx="2.5"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg></span><span class="badge badge--pro">Pro</span></div>
+          <h3>Business travel mode</h3>
+          <p>Policy-aware planning and paperwork your finance team will accept without a follow-up.</p>
+          <ul class="checklist"><li>Travel policy rules with in-policy flags</li><li>Approval notes attached to the trip</li><li>Expense export as CSV and standard accounting formats</li><li>Saved traveller profiles for a team</li></ul>
+        </article>
+
+        <article class="card feature-card">
+          <div class="feature-card__head"><span class="icon-tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9.2"/><path d="M12 6.8v10.4M14.6 9.4H10.7a1.8 1.8 0 0 0 0 3.6h2.6a1.8 1.8 0 0 1 0 3.6H9.4"/></svg></span><span class="badge badge--premium">Premium</span></div>
+          <h3>Multi-currency budgeting</h3>
+          <p>A trip billed in four currencies is hard to keep track of. Llama converts as you go and tells you where you stand.</p>
+          <ul class="checklist"><li>Live conversion at the rate you were actually charged</li><li>Per-category and per-day breakdown</li><li>Alerts when a category runs over</li><li>VAT and GST invoices on Pro</li></ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="shell">
+      <div class="section-head center">
+        <span class="eyebrow">Platform</span>
+        <h2>Where Llama runs</h2>
+      </div>
+      <div class="grid grid-4">
+        <article class="card"><span class="icon-tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9.2"/><line x1="2.8" y1="12" x2="21.2" y2="12"/><path d="M12 2.8a14.5 14.5 0 0 1 0 18.4 14.5 14.5 0 0 1 0-18.4z"/></svg></span><h4>Web app</h4><p class="muted" style="font-size:.9rem">Works in any modern browser. Free plan included.</p></article>
+        <article class="card"><span class="icon-tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4.6" width="18" height="16.4" rx="2.4"/><line x1="3" y1="9.6" x2="21" y2="9.6"/><line x1="8" y1="2.4" x2="8" y2="6.4"/><line x1="16" y1="2.4" x2="16" y2="6.4"/></svg></span><h4>Calendar sync</h4><p class="muted" style="font-size:.9rem">Two-way sync with Google, Outlook and Apple. Premium and above.</p></article>
+        <article class="card"><span class="icon-tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 18 3.5 12 9 6"/><polyline points="15 6 20.5 12 15 18"/></svg></span><h4>API and Slack</h4><p class="muted" style="font-size:.9rem">Programmatic access and a Slack app for teams. Pro only.</p></article>
+        <article class="card"><span class="icon-tile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 13v-1a8 8 0 0 1 16 0v1"/><rect x="2" y="13" width="4.5" height="7" rx="2"/><rect x="17.5" y="13" width="4.5" height="7" rx="2"/><path d="M20 20v.5a2.5 2.5 0 0 1-2.5 2.5H13"/></svg></span><h4>Support</h4><p class="muted" style="font-size:.9rem">Community on Free, 24-hour email on Premium, 24/7 on Pro.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--tight">
+    <div class="shell">
+      <div class="cta-band">
+        <h2 data-i18n="ctab.title">Start planning your next trip free</h2>
+        <p data-i18n="ctab.body"></p>
+        <div class="cluster">
+          <a class="btn btn--accent btn--lg" href="signup.html" data-i18n="cta.startFree">Start free</a>
+          <a class="btn btn--outline btn--lg" href="pricing.html" data-i18n="cta.seePlans">See plans</a>
+        </div>
+        <small data-i18n="ctab.note"></small>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="shell">
+    <div class="footer-grid">
+      <div class="footer-col footer-about">
+        <a class="brand" href="index.html">
+          <svg class="brand__mark" viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="16" fill="#0e7c7b"/><g fill="#fff"><path d="M35.2 20.6c-1.3-5.8-.5-9.6 2-9.8 2.5-.2 3.7 3.4 3.3 9.4z"/><path d="M45.6 21.4c.2-5.9 1.6-8.9 3.7-8.4 2.1.5 2.3 4.4.6 9.3z"/><path d="M34.6 19.8h6.6a9.4 9.4 0 0 1 9.4 9.4v20.9a4.6 4.6 0 0 1-4.6 4.6h-3.9a4.6 4.6 0 0 1-4.6-4.6V37.9h-8.1a8.4 8.4 0 0 1-8.4-8.4v-1.2a8.5 8.5 0 0 1 8.5-8.5z"/><rect x="11.4" y="22.6" width="22.6" height="14.6" rx="7.3"/></g><circle cx="31.6" cy="27.4" r="2.4" fill="#0e7c7b"/></svg>
+          <span>Llama<span class="brand__llc">LLC</span></span>
+        </a>
+        <p data-i18n="footer.about">Llama is a travel planning assistant built by Llama LLC.</p>
+      </div>
+
+      <div class="footer-col">
+        <h4 data-i18n="footer.product">Product</h4>
+        <ul>
+          <li><a href="features.html" data-i18n="nav.features">Features</a></li>
+          <li><a href="pricing.html" data-i18n="nav.pricing">Pricing</a></li>
+          <li><a href="signup.html" data-i18n="cta.startFree">Start free</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4 data-i18n="footer.company">Company</h4>
+        <ul>
+          <li><a href="about.html" data-i18n="nav.about">About</a></li>
+          <li><a href="about.html#careers" data-i18n="footer.careers">Careers</a></li>
+          <li><a href="about.html#press" data-i18n="footer.press">Press</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4 data-i18n="footer.support">Support</h4>
+        <ul>
+          <li><a href="contact.html" data-i18n="footer.contact">Contact us</a></li>
+          <li><a href="account.html" data-i18n="account.title">Manage subscription</a></li>
+          <li><a href="contact.html#help" data-i18n="footer.help">Help centre</a></li>
+          <li><a href="contact.html#status" data-i18n="footer.status">System status</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4 data-i18n="footer.legal">Legal</h4>
+        <ul>
+          <li><a href="legal/privacy.html" data-i18n="footer.privacy">Privacy notice</a></li>
+          <li><a href="legal/terms.html" data-i18n="footer.terms">Terms of service</a></li>
+          <li><a href="legal/cookies.html" data-i18n="footer.cookies">Cookie policy</a></li>
+          <li><a href="legal/refunds.html" data-i18n="footer.refunds">Refunds &amp; cancellation</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p data-i18n="footer.rights">&copy; 2026 Llama LLC. All rights reserved.</p>
+      <p data-i18n="brand.tagline">Travel planning, handled.</p>
+    </div>
+    <p class="footer-legal-note" data-i18n="footer.entityNote"></p>
+    <p class="footer-legal-note"><strong data-i18n="footer.demoNote"></strong></p>
+  </div>
+</footer>
+
+<!-- Plan interest modal - stands in for checkout until a payment processor is connected -->
+<dialog class="modal" id="plan-modal" aria-labelledby="plan-modal-title">
+  <button type="button" class="modal__close" data-action="close-modal" data-i18n-attr="aria-label:a11y.close" aria-label="Close">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+  </button>
+  <form class="modal__body" novalidate>
+    <h3 id="plan-modal-title" data-i18n="modal.title">Payments are not live yet</h3>
+    <p class="muted" data-role="modal-body" style="font-size:.93rem"></p>
+    <div class="form-note"><strong data-i18n="modal.planLabel">Selected plan</strong>: <span data-role="modal-plan"></span></div>
+    <div class="field">
+      <label for="modal-email" data-i18n="modal.emailLabel">Email address</label>
+      <input class="input" type="email" id="modal-email" required autocomplete="email" data-i18n-attr="placeholder:modal.emailPh" placeholder="you@example.com">
+    </div>
+    <label class="checkbox-row">
+      <input type="checkbox" required>
+      <span data-i18n="modal.consent">Email me once when subscriptions open.</span>
+    </label>
+    <div class="cluster">
+      <button type="submit" class="btn btn--primary" data-i18n="modal.submit">Tell me at launch</button>
+      <button type="button" class="btn btn--ghost" data-action="close-modal" data-i18n="modal.cancel">Not now</button>
+    </div>
+  </form>
+</dialog>
+
+<div class="cookie-bar" id="cookie-bar" role="region" aria-label="Cookie consent">
+  <h4 data-i18n="cookie.title">Cookies</h4>
+  <p data-i18n="cookie.body">We use strictly necessary cookies to run the site.</p>
+  <div class="cluster">
+    <button type="button" class="btn btn--primary btn--sm" data-consent="all" data-i18n="cookie.accept">Accept all</button>
+    <button type="button" class="btn btn--outline btn--sm" data-consent="essential" data-i18n="cookie.essential">Essential only</button>
+    <a class="btn btn--ghost btn--sm" href="legal/cookies.html" data-i18n="cookie.more">Cookie policy</a>
+  </div>
+</div>
+
+<div class="toast" id="toast" role="status" aria-live="polite">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+  <span data-role="toast-text"></span>
+</div>
+
+<script src="assets/js/config.js"></script>
+<script src="assets/js/i18n.js"></script>
+<script src="assets/js/app.js"></script>
+</body>
+</html>

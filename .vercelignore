@@ -1,0 +1,21 @@
+# Vercel hosts the static site only. The API runs on Railway and is reached
+# through the rewrite in vercel.json, so no server code is uploaded here - and
+# its secrets never are.
+#
+# The generated HTML is committed, so there is no build step on Vercel.
+# Run `npm run build` locally after editing anything in tools/.
+
+server/
+tools/
+node_modules/
+
+# Secrets. `.env.*` also covers .env.backup and friends.
+.env
+.env.*
+!.env.example
+
+# Local tooling and docs - nothing to serve.
+.claude/
+README.md
+package-lock.json
+railway.json

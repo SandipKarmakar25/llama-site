@@ -1,0 +1,32 @@
+{
+  "name": "llama-site",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Marketing site for Llama LLC, a travel planning assistant. Static HTML/CSS/JS, no runtime dependencies.",
+  "main": "server/index.js",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "start": "node server/index.js",
+    "dev": "node --watch server/index.js",
+    "build": "node tools/build.js",
+    "check": "node tools/check.js",
+    "test": "node tools/check.js && node server/scripts/test.js",
+    "test:server": "node server/scripts/test.js",
+    "serve": "node tools/serve.js",
+    "stripe:provision": "node server/scripts/provision.js",
+    "stripe:provision:dry": "node server/scripts/provision.js --dry-run",
+    "stripe:check": "node server/scripts/provision.js --check",
+    "stripe:registrations": "node server/scripts/tax-registrations.js",
+    "stripe:tax-preview": "node server/scripts/tax-preview.js",
+    "stripe:resync": "node server/scripts/resync.js",
+    "stripe:listen": "stripe listen --forward-to localhost:4173/api/stripe/webhook"
+  },
+  "license": "UNLICENSED",
+  "dependencies": {
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1",
+    "stripe": "^22.5.0"
+  }
+}

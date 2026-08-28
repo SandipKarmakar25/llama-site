@@ -1,0 +1,18 @@
+node_modules/
+
+# Secrets - never commit
+.env
+.env.*
+!.env.example
+
+# server/prices.json IS committed on purpose. Price IDs are not secret - they
+# appear in every Checkout URL - and without the file a deployed server boots
+# with 0/20 prices and payments silently disabled.
+#
+# Note the committed IDs are whichever mode you last provisioned. Deploying
+# live-mode keys against test-mode IDs fails with "No such price"; re-run
+#   npm run stripe:provision -- --yes-live
+# and commit the result. `npm run stripe:check` catches the mismatch.
+
+# Local subscription projection and webhook replay log
+server/data/
