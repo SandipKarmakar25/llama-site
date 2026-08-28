@@ -6,7 +6,6 @@
   "installCommand": null,
   "trailingSlash": false,
 
-  "//": "The generated HTML is committed, so there is nothing to build here - run `npm run build` locally after editing anything in tools/. The rewrite sends /api/* to Railway so the browser only ever talks to ONE origin: the session cookie stays first-party (SameSite=Lax survives the Stripe redirect) and there is no CORS to configure. Replace the host below with your Railway domain.",
   "rewrites": [
     {
       "source": "/api/:path*",
